@@ -1,6 +1,5 @@
 /*
  *  * File: 4-puts.c
- *   * Auth: Solomon kassa
  *    */
 
 #include <stdio.h>
