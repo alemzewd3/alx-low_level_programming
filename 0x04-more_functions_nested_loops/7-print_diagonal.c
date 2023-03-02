@@ -1,27 +1,33 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * more_numbers - prints 10 times the numbers, from 0 to 14
- * followed by a new line
- */
-void more_numbers(void)
-{
-	char n, c;
-	int i = 0;
+*print_diagonal - prints a diagonal
+*@n: parameter
+*Return: returns nothing
+*/
 
-	while (i < 10)
+void print_diagonal(int n)
+{
+	int len, space;
+
+	if (n > 0)
 	{
-		for (n = 0; n <= 14; n++)
+		for (len = 0; len < n; len++)
 		{
-			c = n;
-			if (n > 9)
+			for (space = 0; space < len; space++)
 			{
-				_putchar('1');
-				c = n % 10;
+				putchar(' ');
 			}
-			_putchar('0' + c);
+
+			putchar('\\');
+
+			if (len == (n - 1))
+			{
+				continue;
+			}
+			putchar('\n');
 		}
-		_putchar('0' + c);
-		i++;
 	}
+	putchar('\n');
 }
